@@ -1,0 +1,28 @@
+# Desenvolvido por: Prof. Ari Monteiro
+# Data: 04-12-2023
+# Contato: http://wwww.dharmasistemas.com.br
+# Referências:
+# https://www.geeksforgeeks.org/writing-csv-files-in-python/?ref=header_search
+
+# Importação da biblioteca de módulos do IronPython 2.7
+import sys
+sys.path.append(r'C:\Program Files (x86)\IronPython 2.7\Lib')
+
+# Importação da biblioteca para trabalhar com arquivos CSV
+import csv
+
+# Entradas
+ArquivoCSV = IN[0]
+Dados = IN[1]
+Delimitador = IN[2]
+
+# Escrever dados no arquivo CSV
+with open(ArquivoCSV, 'w') as file:
+	# Definir delimitador de coluna ';'
+	writer = csv.writer(file, delimiter = Delimitador, lineterminator='\r')
+	
+	# Escrever corpo do CSV
+	writer.writerows(Dados)
+
+# Atribua a sua saída para a variável OUT.
+OUT = Dados
